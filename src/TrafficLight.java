@@ -10,12 +10,22 @@ public class TrafficLight {
         defaultColor = 1;
     }
 
+    /**
+     *
+     * @param id
+     * @param numberOfLights
+     */
     public TrafficLight(int id, int numberOfLights) {
         this.id = id;
         this.numberOfLights = numberOfLights;
     }
 
-    public String showColor(int light) {
+    /**
+     *
+     * @param light
+     * @return
+     */
+    public String getColor(int light) {
 
         String result;
         switch (light) {
@@ -39,23 +49,76 @@ public class TrafficLight {
         return result;
     }
 
-    public int showId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
        return id;
     }
 
-    public void showColorAndId(int light) {
+    /**
+     *
+     * @param light
+     */
+    public void getColorAndId(int light) {
         String result;
-        result = showColor(light);
+        result = getColor(light);
 
         System.out.println("My color is "
                 + result
                 + " and my id is: "
-                + showId()
+                + getId()
         );
     }
 
+    /**
+     *
+     * @param number
+     * @return
+     */
     public boolean isPositiveNumber(int number) {
         return number >= 0;
+    }
+
+    /**
+     *
+     * @param id
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getDefaultColor() {
+        return defaultColor;
+    }
+
+    /**
+     *
+     * @param defaultColor
+     */
+    public void setDefaultColor(int defaultColor) {
+        this.defaultColor = defaultColor;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public int getNumberOfLights() {
+        return numberOfLights;
+    }
+
+    /**
+     *
+     * @param numberOfLights
+     */
+    public void setNumberOfLights(int numberOfLights) {
+        this.numberOfLights = numberOfLights;
     }
 
 }
